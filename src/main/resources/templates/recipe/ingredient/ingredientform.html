@@ -22,7 +22,7 @@
         <div class="col-md-6 col-md-offset-3">
             <!--/*@thymesVar id="ingredient" type="guru.springframework.commands.IngredientCommand"*/-->
             <form  th:object="${ingredient}" th:action="@{'/recipe/' + ${ingredient.getRecipeId()} + '/ingredient'} ">
-                <input type="hidden" th:field="*{id}"/>
+                <input type="hidden" th:field="${ingredient.id}"/>
                 <div class="pannel-group">
                     <div class="panel panel-primary">
                         <div class="panel-heading">
@@ -34,12 +34,12 @@
                             <div class="row">
                                 <div class="col-md-3 form-group">
                                     <label>Description:</label>
-                                    <input type="text" class="form-control" th:field="*{description}"/>
+                                    <input type="text" class="form-control" th:field="${ingredient.description}"/>
                                 </div>
 
                                 <div class="col-md-3 form-group">
                                     <label>Amount:</label>
-                                    <input type="number" class="form-control" th:field="*{amount}"/>
+                                    <input type="number" class="form-control" th:field="${ingredient.amount}"/>
                                 </div>
 
                                 <div class="col-md-3 form-group">
